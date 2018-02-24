@@ -1,25 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
 
 body {
-	background-image: url(https://i.imgur.com/ugWb6BU.gif);
+	/* background-image: url(https://i.imgur.com/ugWb6BU.gif);
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Work Sans', sans-serif; */
+	font-family: 'Montserrat', sans-serif;
+	background-color: #e4f4f2;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: white;
-	border-radius: 1%;
-	padding: 1%;
-	margin-bottom: 1%;
 	margin-top: 4%;
 }
 
+.top {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+}
+
+/* myProgress is progress bar. */
+#myProgress {
+  width: 50%;
+	/* height: 1%; */
+  background-color: #ddd;
+	border-radius: 2%;
+	/* padding: 0.4%; */
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+
+/* myBar is the text inside of the bar. */
+#myBar {
+  width: 0%;
+  height: 1%;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
 
 .material-icons {
 	/*height: 100%;*/
@@ -29,12 +53,14 @@ body {
 
 
 .question-image {
-	width: 100%;
-	height: 80%;
+	width: 90%;
+	height: 75%;
 	padding-top: 3%;
+	justify-content: center;
+	display: flex;
+	margin: auto;
+	/* flex-direction: column; */
 }
-
-
 
 .question-title {
 	text-align: center;
@@ -46,30 +72,13 @@ body {
 
 
 .row div{
-	height: 80%;
+	height: 60%;
 }
 
 .col-sm-6 {
-	height: 80%;
 	background-color: white;
 	border-radius: 2%;
 	padding: 1%;
 	margin: 1%;
 	width: 48%;
-}
-
-/* myProgress is progress bar. */
-#myProgress {
-	align-self: center;
-  width: 80%;
-  background-color: #ddd;
-}
-/* myBar is the text inside of the bar. */
-#myBar {
-  width: 0%;
-  height: 10px;
-  background-color: #4CAF50;
-  text-align: center;
-  line-height: 30px;
-  color: white;
 }

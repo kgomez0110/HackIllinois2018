@@ -1,6 +1,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #e4f4f2;
+	/* background-color: #3aafa2; */
 }
 
 #content {
@@ -14,7 +15,7 @@ body {
 }
 
 #bar {
-	width: 0%; 
+	width: 0%;
 	height: 6%;
 	margin-left: 5%;
 	margin-right: 5%;
