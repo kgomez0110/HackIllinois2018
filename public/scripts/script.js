@@ -1,41 +1,41 @@
 var Questions = {0: ['Quiet', 'Loud'],
-                 1: ['Eating', 'Starve'],
+                 1: ['Food', 'No Food'],
                  2: ['Coffee', 'Tea'],
-                 3: ['Near', 'Faraway'],
-                 4: ['Small', 'Large'], // Desk space
-                 5: ['Collaborate', 'Singular'],
+                 3: ['Near', 'Far Away'],
+                 4: ['Small Desk', 'Large Space'], // Desk space
+                 5: ['Collaborate', 'Work Alone'],
                  6: ['Outdoors', 'Indoors'],
                  7: ['Modern', 'Traditional'],
                  8: ['Early Bird', 'Night Owl'],
-                 9: ['Open', 'Closed'], // This means windows.
-                 10: ['Unwind', 'Non-stop'],
-                 11: ['On campus', 'Off campus'],
+                 9: ['Windows', 'No Windows'], // This means windows.
+                 10: ['Breaks', 'No Breaks'],
+                 11: ['On-campus', 'Off-campus'],
                  12: ['Whiteboard', 'Chalkboard']
                };
 var Images =   {'Quiet': "https://ak8.picdn.net/shutterstock/videos/8506768/thumb/1.jpg",
                 'Loud': "https://www.beroomers.com/blog/wp-content/uploads/2016/04/timberyard-places-study-london.jpg",
-                'Eating': "https://ak6.picdn.net/shutterstock/videos/5275826/thumb/1.jpg",
-                'Starve': "https://az616578.vo.msecnd.net/files/2016/04/21/635968798795806074-1861238967_studyingkid.jpg",
+                'Food': "https://ak6.picdn.net/shutterstock/videos/5275826/thumb/1.jpg",
+                'No Food': "https://az616578.vo.msecnd.net/files/2016/04/21/635968798795806074-1861238967_studyingkid.jpg",
                 'Coffee': "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-super-tease.jpg",
                 'Tea': "http://photos.demandstudios.com/getty/article/108/230/180342989.jpg",
                 'Near': "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/college-student-walking-on-campus_zyp_tqb-h__F0000.png",
-                'Faraway': "https://media1.fdncms.com/northcoast/imager/college-of-the-redwoods-students-and-good-friends-courtney-borgelin-left/u/zoom/2312185/news1-08.jpg",
-                'Small': "http://castprofessionallearning.org/wp-content/uploads/2015/09/Female-College-Student-copy.jpg",
-                'Large': "https://www.pearsoned.com/wp-content/uploads/Female-college-student-sitting-at-large-table-studying-in-a-library-770x370.jpg",
+                'Far Away': "http://www.pressdemocrat.com/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=w2vwcZpiu2h7mgyfsXlFyM$daE2N3K4ZzOUsqbU5sYsfv3Y6Gr$I85BfJJAuqEFjWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&CONTENTTYPE=image/jpeg",
+                'Small Desk': "http://castprofessionallearning.org/wp-content/uploads/2015/09/Female-College-Student-copy.jpg",
+                'Large Space': "https://www.pearsoned.com/wp-content/uploads/Female-college-student-sitting-at-large-table-studying-in-a-library-770x370.jpg",
                 'Collaborate': "https://www.lrs.org/wp-content/uploads/2017/04/LJ_academic.jpg",
-                'Singular': "https://image1.masterfile.com/getImage/NjExNy0wNzQ5NDE3NmVuLjAwMDAwMDAw=AB33VH/6117-07494176en_Masterfile.jpg",
+                'Work Alone': "https://image1.masterfile.com/getImage/NjExNy0wNzQ5NDE3NmVuLjAwMDAwMDAw=AB33VH/6117-07494176en_Masterfile.jpg",
                 'Outdoors': "http://ak5.picdn.net/shutterstock/videos/5659685/thumb/1.jpg",
                 'Indoors': "https://c.pxhere.com/photos/42/86/library_study_homework_education_studying_school_student_knowledge-799419.jpg!d",
                 'Modern': "http://ak9.picdn.net/shutterstock/videos/6780709/thumb/1.jpg",
                 'Traditional': "https://upload.wikimedia.org/wikipedia/commons/3/39/Harper_Library%2C_interior%2C_University_of_Chicago.jpg",
                 'Early Bird': "http://coachlois.com/wp-content/uploads/2016/10/Working-in-the-morning.jpg",
                 'Night Owl': "https://juicing-for-health.com/wp-content/uploads/2015/07/night-shift.jpg",
-                'Open': "https://thecaptivereader.files.wordpress.com/2010/11/tumblr_lbl08xntol1qa1xqko1_500.jpg",
-                'Closed': "https://static1.squarespace.com/static/53c82442e4b00bfba5ca1612/53ced065e4b014ef6eaf0784/53ced066e4b014ef6eaf0785/1406062696086/Honnold+Library1Edit.jpg?format=750w",
-                'Unwind': "http://img.wennermedia.com/620-width/mj-618_348_the-essentials-5-must-have-items-for-a-long-bike-ride.jpg",
-                'Non-stop': "https://qph.fs.quoracdn.net/main-qimg-1587ff2b4b96d394113644a4fc16e17c-c",
-                'On campus': "https://yura.yale.edu/sites/default/files/event-images/yura_cross_campus.jpg",
-                'Off campus': "https://thumbs.dreamstime.com/b/people-resting-street-cafe-paris-france-september-terrace-le-metro-located-place-maubert-provide-53057209.jpg",
+                'Windows': "https://thecaptivereader.files.wordpress.com/2010/11/tumblr_lbl08xntol1qa1xqko1_500.jpg",
+                'No Windows': "https://static1.squarespace.com/static/53c82442e4b00bfba5ca1612/53ced065e4b014ef6eaf0784/53ced066e4b014ef6eaf0785/1406062696086/Honnold+Library1Edit.jpg?format=750w",
+                'Breaks': "http://img.wennermedia.com/620-width/mj-618_348_the-essentials-5-must-have-items-for-a-long-bike-ride.jpg",
+                'No Breaks': "https://qph.fs.quoracdn.net/main-qimg-1587ff2b4b96d394113644a4fc16e17c-c",
+                'On-campus': "https://yura.yale.edu/sites/default/files/event-images/yura_cross_campus.jpg",
+                'Off-campus': "https://thumbs.dreamstime.com/b/people-resting-street-cafe-paris-france-september-terrace-le-metro-located-place-maubert-provide-53057209.jpg",
                 'Whiteboard': "https://apps.carleton.edu/reason_package/reason_4.0/www/images/645961.jpg",
                 'Chalkboard': "https://az616578.vo.msecnd.net/files/2016/08/27/636078616572711452-1323241485_Those%20who%20can.jpg",
               };
@@ -113,7 +113,11 @@ $( document ).ready(function() {
         if(i == finalists.length - 1) {
           compile = compile + 'and ' + finalists[i];
         } else {
-          compile = compile + finalists[i] + ', ';
+          if (finalists.length == 2) {
+            compile = compile + finalists[i] + ' ';
+          } else {
+            compile = compile + finalists[i] + ', ';
+          }
         }
       }
       $('#finish').text(compile + '!')

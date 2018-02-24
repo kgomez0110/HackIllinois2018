@@ -4,11 +4,11 @@ body {
 }
 
 .row div{
-	height: 70%;
+	height: auto;
 	background-color: white;
 	border-radius: 2%;
 	padding: 2%;
-	margin-bottom: 1%;
+	margin-bottom: 5%;
 	text-align: center;
 }
 
