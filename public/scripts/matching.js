@@ -1,33 +1,28 @@
 function matching(answers) {
   var matchOutput = [];
-  var location, matchingstrings, best;
+  var location, matchingstrings, count;
   var bestcount = 0;
 
   locations = returnDict();
-  console.log(locations);
+  var locationkeys = Object.keys(locations);
 
-  
-  if(answers.length !== locations.keys[0].length) {
-    console.log('Something wrong with answers and location array.');
-  } else {
-    locations.keys.forEach((index) => {
-      count = 0;
-      location = locations.keys[index];
-      matchingstrings = locations[index];
-      matchingstrings.forEach((answer) => {
-        if(answers.indexOf(answer) !== -1) {
-          count++;
-        }
-      })
-      if(count > bestcount) {
-        matchOutput = [];
-        matchOutput.push(location);
-      }
-      if(count === bestcount) {
-        matchOutput.push(location);
+  locationkeys.forEach((index) => {
+    count = 0;
+    matchingstrings = locations[index];
+    matchingstrings.forEach((answer) => {
+      if(answers.indexOf(answer) !== -1) {
+        count++;
       }
     })
-  }
-
+    console.log(count);
+    if(count > bestcount) {
+      bestcount = count;
+      matchOutput = [];
+      matchOutput.push(index);
+    } else if(count === bestcount) {
+      bestcount = count;
+      matchOutput.push(index);
+    }
+  })
   return matchOutput;
 }

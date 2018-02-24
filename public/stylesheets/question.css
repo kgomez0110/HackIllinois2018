@@ -12,6 +12,15 @@ body {
 .container {
 	/*margin-left: 0px;
 	margin-right: 0px;*/
+<<<<<<< HEAD
+=======
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	border-radius: 1%;
+	padding: 1%;
+>>>>>>> master
 	margin-bottom: 1%;
 	margin-top: 4%;
 }
@@ -52,4 +61,20 @@ body {
 	padding: 1%;
 	margin: 1%;
 	width: 48%;
+}
+
+/* myProgress is progress bar. */
+#myProgress {
+	align-self: center;
+  width: 80%;
+  background-color: #ddd;
+}
+/* myBar is the text inside of the bar. */
+#myBar {
+  width: 0%;
+  height: 10px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
 }

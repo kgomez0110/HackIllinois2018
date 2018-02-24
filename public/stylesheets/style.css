@@ -19,7 +19,7 @@ body {
 .content h2{
 	font-weight: 900;
 	font-size: 500%;
-	line-height: 130%; 
+	line-height: 130%;
 }
 
 .content h3{
@@ -42,26 +42,13 @@ body {
 	font-size: 150%;
 }
 
-/* myProgress is progress bar. */
-#myProgress {
-  width: 100%;
-  background-color: #ddd;
-}
-/* myBar is the text inside of the bar. */
-#myBar {
-  width: 10%;
-  height: 30px;
-  background-color: #4CAF50;
-  text-align: center;
-  line-height: 30px;
-  color: white;
-}
 
 /*.avocado-gradient {
-	
+
 }*/
 
 
+<<<<<<< HEAD
 /*.avocado-flat{background-color:#3aafa2}
 .avocado-flat 
 .secondary-bg{background-color:#1b7068}
@@ -119,3 +106,7 @@ avocado-flat .svg-fill{fill:#fff}
 
 
 
+=======
+/*.avocado-flat{background-color:#3aafa2}.avocado-flat .secondary-bg{background-color:#1b7068}.avocado-flat .accent-bg{background-color:#353740}.avocado-flat .primary-color{color:#fff}.avocado-flat .secondary-color{color:#e4f4f2}.avocado-flat .svg-fill{fill:#fff}*/
+/*.avocado-gradient{background:linear-gradient(#1b7068,#3aafa2)}.avocado-gradient .secondary-bg{background-color:#1b7068}.avocado-gradient .accent-bg{background-color:#353740}.avocado-gradient .primary-color{color:#fff}.avocado-gradient .secondary-color{color:#e4f4f2}.avocado-gradient .svg-fill{fill:#fff}.avocado-accent{background-color:#353740}.avocado-accent .secondary-bg{background-color:#1b7068}.avocado-accent .accent-bg{background-color:#3aafa2}.avocado-accent .primary-color{color:#fff}.avocado-accent .secondary-color{color:#e1e1e2}.avocado-accent .svg-fill{fill:#fff}.avocado-black{background-color:#1b7068}.avocado-black .secondary-bg{background-color:#3aafa2}.avocado-black .accent-bg{background-color:#353740}.avocado-black .primary-color{color:#fff}.avocado-black .secondary-color{color:#ddeae9}.avocado-black .svg-fill{fill:#fff}.avocado-white{background-color:#fff}.avocado-white .secondary-bg{background-color:#e4f4f2}.avocado-white .accent-bg{background-color:#353740}.avocado-white .primary-color{color:#000}.avocado-white .secondary-color{color:#8f8f8f}.avocado-white .svg-fill{fill:#3aafa2}*/
+>>>>>>> master
