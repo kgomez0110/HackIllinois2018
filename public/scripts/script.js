@@ -12,34 +12,35 @@ var Questions = {0: ['Quiet', 'Loud'],
                  11: ['On-campus', 'Off-campus'],
                  12: ['Whiteboard', 'Chalkboard']
                };
-var Images =   {'Quiet': "https://ak8.picdn.net/shutterstock/videos/8506768/thumb/1.jpg",
-                'Loud': "https://www.beroomers.com/blog/wp-content/uploads/2016/04/timberyard-places-study-london.jpg",
-                'Food': "https://ak6.picdn.net/shutterstock/videos/5275826/thumb/1.jpg",
-                'No Food': "https://az616578.vo.msecnd.net/files/2016/04/21/635968798795806074-1861238967_studyingkid.jpg",
-                'Coffee': "https://cdn.cnn.com/cnnnext/dam/assets/150929101049-black-coffee-stock-super-tease.jpg",
-                'Tea': "http://photos.demandstudios.com/getty/article/108/230/180342989.jpg",
-                'Near': "https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/college-student-walking-on-campus_zyp_tqb-h__F0000.png",
-                'Far Away': "http://www.pressdemocrat.com/csp/mediapool/sites/dt.common.streams.StreamServer.cls?STREAMOID=w2vwcZpiu2h7mgyfsXlFyM$daE2N3K4ZzOUsqbU5sYsfv3Y6Gr$I85BfJJAuqEFjWCsjLu883Ygn4B49Lvm9bPe2QeMKQdVeZmXF$9l$4uCZ8QDXhaHEp3rvzXRJFdy0KqPHLoMevcTLo3h8xh70Y6N_U_CryOsw6FTOdKL_jpQ-&CONTENTTYPE=image/jpeg",
-                'Small Desk': "http://castprofessionallearning.org/wp-content/uploads/2015/09/Female-College-Student-copy.jpg",
-                'Large Space': "https://www.pearsoned.com/wp-content/uploads/Female-college-student-sitting-at-large-table-studying-in-a-library-770x370.jpg",
-                'Collaborate': "https://www.lrs.org/wp-content/uploads/2017/04/LJ_academic.jpg",
-                'Work Alone': "https://image1.masterfile.com/getImage/NjExNy0wNzQ5NDE3NmVuLjAwMDAwMDAw=AB33VH/6117-07494176en_Masterfile.jpg",
-                'Outdoors': "http://ak5.picdn.net/shutterstock/videos/5659685/thumb/1.jpg",
-                'Indoors': "https://c.pxhere.com/photos/42/86/library_study_homework_education_studying_school_student_knowledge-799419.jpg!d",
-                'Modern': "http://ak9.picdn.net/shutterstock/videos/6780709/thumb/1.jpg",
-                'Traditional': "https://upload.wikimedia.org/wikipedia/commons/3/39/Harper_Library%2C_interior%2C_University_of_Chicago.jpg",
-                'Early Bird': "http://coachlois.com/wp-content/uploads/2016/10/Working-in-the-morning.jpg",
-                'Night Owl': "https://juicing-for-health.com/wp-content/uploads/2015/07/night-shift.jpg",
-                'Windows': "https://thecaptivereader.files.wordpress.com/2010/11/tumblr_lbl08xntol1qa1xqko1_500.jpg",
-                'No Windows': "https://static1.squarespace.com/static/53c82442e4b00bfba5ca1612/53ced065e4b014ef6eaf0784/53ced066e4b014ef6eaf0785/1406062696086/Honnold+Library1Edit.jpg?format=750w",
-                'Breaks': "http://img.wennermedia.com/620-width/mj-618_348_the-essentials-5-must-have-items-for-a-long-bike-ride.jpg",
-                'No Breaks': "https://qph.fs.quoracdn.net/main-qimg-1587ff2b4b96d394113644a4fc16e17c-c",
-                'On-campus': "https://yura.yale.edu/sites/default/files/event-images/yura_cross_campus.jpg",
-                'Off-campus': "https://thumbs.dreamstime.com/b/people-resting-street-cafe-paris-france-september-terrace-le-metro-located-place-maubert-provide-53057209.jpg",
-                'Whiteboard': "https://apps.carleton.edu/reason_package/reason_4.0/www/images/645961.jpg",
-                'Chalkboard': "https://az616578.vo.msecnd.net/files/2016/08/27/636078616572711452-1323241485_Those%20who%20can.jpg",
+var Images =   {'Quiet': "../public/images/quiet.jpg",
+                'Loud': "../public/images/loud.jpg",
+                'Food': "../public/images/food.jpg",
+                'No Food': "../public/images/no_food.jpg",
+                'Coffee': "../public/images/coffee.jpg",
+                'Tea': "../public/images/tea.jpg",
+                'Near': "../public/images/near.png",
+                'Far Away': "../public/images/far_away.jpg",
+                'Small Desk': "../public/images/small_desk.jpg",
+                'Large Space': "../public/images/large_space.jpg",
+                'Collaborate': "../public/images/collaborate.jpg",
+                'Work Alone': "../public/images/work_alone.jpg",
+                'Outdoors': "../public/images/outdoors.jpg",
+                'Indoors': "../public/images/indoors.jpg!d",
+                'Modern': "../public/images/modern.jpg",
+                'Traditional': "../public/images/traditional.jpg",
+                'Early Bird': "../public/images/early_bird.jpg",
+                'Night Owl': "../public/images/night_owl.jpg",
+                'Windows': "../public/images/windows.jpg",
+                'No Windows': "../public/images/no_windows.jpg",
+                'Breaks': "../public/images/breaks.jpg",
+                'No Breaks': "../public/images/no_breaks.jpg",
+                'On-campus': "../public/images/on-campus.jpg",
+                'Off-campus': "../public/images/off-campus.jpg",
+                'Whiteboard': "../public/images/whiteboard.jpg",
+                'Chalkboard': "../public/images/chalkboard.jpg",
               };
 $( document ).ready(function() {
+  initMap();
   var current = 0;
   var progresswidth = 0;
   var Answers = [];
@@ -85,7 +86,7 @@ $( document ).ready(function() {
     current++;
 
     // Animate and update progress bar.
-    move();
+    movebar();
 
     if(current === Object.keys(Questions).length) {
       finish()
@@ -127,7 +128,7 @@ $( document ).ready(function() {
   }
 
   // Progress Bar Update.
-  function move() {
+  function movebar() {
     // Assume MyBar is the ID of the bar.
     var elem = document.getElementById("myBar");
     var width = progresswidth;
@@ -157,7 +158,7 @@ var finish_page = `
 <div class="container">
 <div class="row">
   <div id="finish" class="col-sm-12">
-    Yoooo
+
   </div>
 </div>
 </div>
