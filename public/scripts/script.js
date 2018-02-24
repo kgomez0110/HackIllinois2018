@@ -12,6 +12,33 @@ var Questions = {0: ['Quiet', 'Loud'],
                  11: ['On campus', 'Off campus'],
                  12: ['Whiteboard', 'Chalkboard']
                };
+var Images =   {Quiet: [],
+                Loud: [],
+                Eating: [],
+                Starve: [],
+                Coffee: [],
+                Tea: [],
+                Near: [],
+                Faraway: [],
+                Small: [],
+                Large: [],
+                Collaborate:[],
+                Singular:[],
+                Outdoors:[],
+                Indoors:[],
+                Modern:[],
+                Traditional:[],
+                Early Bird:[],
+                Night Owl:[],
+                Open:[],
+                Closed:[],
+                Unwind:[],
+                Non-stop:[],
+                On campus:[],
+                Off campus:[],
+                Whiteboard:[],
+                Chalkboard:[]
+              };
 var Answers = [];
 current = 0;
 $( document ).ready(function() {
@@ -26,15 +53,17 @@ $( document ).ready(function() {
     Answers[current] = Questions[current][0];
     if(current === Questions.keys.length) {
       finish();
+    } else {
+      next();
     }
-    next();
   })
   $('#option2').click((e) => {
     Answers[current] = Questions[current][0];
     if(current === Questions.keys.length) {
       finish();
+    } else {
+      next();
     }
-    next();
   })
 
   // Handling going from question(n) to question(n+1)
@@ -44,7 +73,8 @@ $( document ).ready(function() {
     current++;
 
     // Animate the next options.
-
+    changeImage($('#image1'), Images[Questions[current]]);
+    changeImage($('#image2'), Images[Questions[current]]);
 
     // Animate and update progress bar.
     move();
@@ -55,6 +85,10 @@ $( document ).ready(function() {
   function finish() {
     var finalists = matching(Answers);
     console.log(finalists);
+  }
+
+  function changeImage(obj, img) {
+    obj.src = img;
   }
 
   // Progress Bar Update.
