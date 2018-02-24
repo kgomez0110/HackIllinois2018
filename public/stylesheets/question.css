@@ -10,17 +10,12 @@ body {
 }
 
 .container {
-	/*margin-left: 0px;
-	margin-right: 0px;*/
-<<<<<<< HEAD
-=======
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	background-color: white;
 	border-radius: 1%;
 	padding: 1%;
->>>>>>> master
 	margin-bottom: 1%;
 	margin-top: 4%;
 }
