@@ -31,3 +31,6 @@ dict["Illini Union - ICS Class Lab Conference Room"] = ['Loud', 'Eating', 'Tea',
 dict["Illini Union - Pine Lounge"] = ['Loud', 'Eating', 'Tea', 'Faraway', 'Collaborate', 'Outdoors', 'Traditional', 'Night Owl', 'Closed', 'Non-stop', 'Off campus', 'Whiteboard']
 dict["Weston Hall - Housing Computer Lab"] = ['Loud', 'Eating', 'Tea', 'Faraway', 'Collaborate', 'Indoors', 'Modern', 'Night Owl', 'Open', 'Non-stop', 'Off campus', 'Whiteboard']
 dict["Sherman Hall - Housing Computer Lab"] = ['Loud', 'Starve', 'Coffee', 'Faraway', 'Collaborate', 'Indoors', 'Traditional', 'Early Bird', 'Open', 'Non-stop', 'Off campus', 'Chalkboard']
+function returnDict() {
+  return dict;
+}
