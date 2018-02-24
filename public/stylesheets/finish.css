@@ -1,0 +1,18 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-size: auto;
+}
+
+.row div{
+	height: 70%;
+	background-color: white;
+	border-radius: 2%;
+	padding: 2%;
+	margin-bottom: 1%;
+	text-align: center;
+}
+
+#finish {
+  font-size: 400%;
+  font-weight: 500;
+}
