@@ -24,10 +24,16 @@ $( document ).ready(function() {
   // ASsume that the ids are 'option1' and 'option2';
   $('#option1').click((e) => {
     Answers[current] = Questions[current][0];
+    if(current === Questions.keys.length) {
+      finish();
+    }
     next();
   })
   $('#option2').click((e) => {
     Answers[current] = Questions[current][0];
+    if(current === Questions.keys.length) {
+      finish();
+    }
     next();
   })
 
@@ -43,6 +49,12 @@ $( document ).ready(function() {
     // Animate and update progress bar.
     move();
 
+  }
+
+  // Return final or finalists locations.
+  function finish() {
+    var finalists = matching(Answers);
+    console.log(finalists);
   }
 
   // Progress Bar Update.

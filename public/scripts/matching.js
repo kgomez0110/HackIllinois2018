@@ -1,7 +1,12 @@
-function matching(answers, locations) {
+function matching(answers) {
   var matchOutput = [];
   var location, matchingstrings, best;
   var bestcount = 0;
+
+  locations = returnDict();
+  console.log(locations);
+
+  
   if(answers.length !== locations.keys[0].length) {
     console.log('Something wrong with answers and location array.');
   } else {
