@@ -40,7 +40,7 @@ var Images =   {'Quiet': "../public/images/quiet.jpg",
                 'Chalkboard': "../public/images/chalkboard.jpg",
               };
 $( document ).ready(function() {
-  initMap();
+  // initMap();
   var current = 0;
   var progresswidth = 0;
   var Answers = [];
@@ -108,23 +108,24 @@ $( document ).ready(function() {
 
     // Give final screen of where to study.
     $('.container').html(finish_page);
-    if(finalists.length > 1) {
-      var compile = "The best places for you to study are ";
+    // if(finalists.length > 1) {
+      // var compile = "The best places for you to study are: \n";
+      var compile = "";
       for(var i = 0; i < finalists.length; i++) {
-        if(i == finalists.length - 1) {
-          compile = compile + 'and ' + finalists[i];
-        } else {
-          if (finalists.length == 2) {
-            compile = compile + finalists[i] + ' ';
-          } else {
-            compile = compile + finalists[i] + ', ';
+        // if(i == finalists.length - 1) {
+        //   compile = compile + 'and ' + finalists[i];
+        // } else {
+          // if (finalists.length == 2) {
+          //   compile = compile + finalists[i] + ' ';
+          // } else {
+            compile += "<p>" + finalists[i] + "</p>" + '\n';
           }
-        }
-      }
-      $('#finish').text(compile + '!')
-    } else {
-      $('#finish').text("The best place for you to study is " + finalists[0] + "!")
-    }
+
+      // $('#finish').text(compile)
+      document.getElementById("finish").innerHTML = compile;
+    // } else {
+    //   $('#finish').text("The best place for you to study is " + finalists[0] + "!")
+    // }
   }
 
   // Progress Bar Update.
@@ -155,7 +156,7 @@ var finish_page = `
 <div id="myProgress">
   <div id="myBad"></div>
 </div>
-<div class="container">
+<div class="container mdc-elevation--z4">
 <div class="row">
   <div id="finish" class="col-sm-12">
 

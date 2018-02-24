@@ -1,3 +1,5 @@
+
+/* @import "../../node_modules/@material/theme/mdc-theme.scss"; */
 @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
 
 body {
@@ -7,8 +9,8 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	font-family: 'Work Sans', sans-serif; */
-	font-family: 'Montserrat', sans-serif;
-	background-color: #e4f4f2;
+	/* font-family: 'Montserrat', sans-serif; */
+	background-color: #efefef;
 }
 
 .container {
@@ -19,7 +21,7 @@ body {
 }
 
 .top {
-	background-color: white;
+	/* background-color: white; */
 	display: flex;
 	justify-content: center;
 }
