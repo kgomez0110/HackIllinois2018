@@ -1,1 +1,3 @@
-// YOUR JS CODE FOR ALL PAGES GOES HERE
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
