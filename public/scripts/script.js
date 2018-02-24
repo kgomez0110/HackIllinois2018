@@ -40,7 +40,6 @@ var Images =   {'Quiet': "../public/images/quiet.jpg",
                 'Chalkboard': "../public/images/chalkboard.jpg",
               };
 $( document ).ready(function() {
-  initMap();
   var current = 0;
   var progresswidth = 0;
   var Answers = [];
@@ -152,13 +151,10 @@ var finish_page = `
 <link rel="stylesheet" type="text/css" href="../public/stylesheets/finish.css">
 </head>
 <body>
-<div id="myProgress">
-  <div id="myBad"></div>
-</div>
+<div id="map" style="width: 100%"></div>
 <div class="container">
 <div class="row">
   <div id="finish" class="col-sm-12">
-
   </div>
 </div>
 </div>
