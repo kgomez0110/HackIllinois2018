@@ -39,11 +39,10 @@ var Images =   {'Quiet': [],
                 'Whiteboard':[],
                 'Chalkboard':[]
               };
-var Answers = [];
-var current = 0;
-var progresswidth = 0;
 $( document ).ready(function() {
-  console.log( "ready!" );
+  var current = 0;
+  var progresswidth = 0;
+  var Answers = [];
 
   // Animation of the background.
 
@@ -55,7 +54,7 @@ $( document ).ready(function() {
     next();
   })
   $('#option2').click((e) => {
-    Answers[current] = Questions[current][0];
+    Answers[current] = Questions[current][1];
     next();
   })
 
@@ -87,7 +86,11 @@ $( document ).ready(function() {
     // Give final screen of where to study.
     $('.container').html(finish_page);
     if(finalists.length > 1) {
-
+      var compile = '';
+      for(var i = 0; i < finalists.length; i++) {
+        compile = compile + finalists[i] + ', ';
+      }
+      $('#finish').text(compile)
     } else {
       $('#finish').text(finalists[0])
     }
