@@ -12,35 +12,36 @@ var Questions = {0: ['Quiet', 'Loud'],
                  11: ['On campus', 'Off campus'],
                  12: ['Whiteboard', 'Chalkboard']
                };
-var Images =   {Quiet: [],
-                Loud: [],
-                Eating: [],
-                Starve: [],
-                Coffee: [],
-                Tea: [],
-                Near: [],
-                Faraway: [],
-                Small: [],
-                Large: [],
-                Collaborate:[],
-                Singular:[],
-                Outdoors:[],
-                Indoors:[],
-                Modern:[],
-                Traditional:[],
-                Early Bird:[],
-                Night Owl:[],
-                Open:[],
-                Closed:[],
-                Unwind:[],
-                Non-stop:[],
-                On campus:[],
-                Off campus:[],
-                Whiteboard:[],
-                Chalkboard:[]
+var Images =   {'Quiet': [],
+                'Loud': [],
+                'Eating': [],
+                'Starve': [],
+                'Coffee': [],
+                'Tea': [],
+                'Near': [],
+                'Faraway': [],
+                'Small': [],
+                'Large': [],
+                'Collaborate':[],
+                'Singular':[],
+                'Outdoors':[],
+                'Indoors':[],
+                'Modern':[],
+                'Traditional':[],
+                'Early Bird':[],
+                'Night Owl':[],
+                'Open':[],
+                'Closed':[],
+                'Unwind':[],
+                'Non-stop':[],
+                'On campus':[],
+                'Off campus':[],
+                'Whiteboard':[],
+                'Chalkboard':[]
               };
 var Answers = [];
-current = 0;
+var current = 0;
+var progresswidth = 0;
 $( document ).ready(function() {
   console.log( "ready!" );
 
@@ -51,19 +52,11 @@ $( document ).ready(function() {
   // ASsume that the ids are 'option1' and 'option2';
   $('#option1').click((e) => {
     Answers[current] = Questions[current][0];
-    if(current === Questions.keys.length) {
-      finish();
-    } else {
-      next();
-    }
+    next();
   })
   $('#option2').click((e) => {
     Answers[current] = Questions[current][0];
-    if(current === Questions.keys.length) {
-      finish();
-    } else {
-      next();
-    }
+    next();
   })
 
   // Handling going from question(n) to question(n+1)
@@ -71,41 +64,61 @@ $( document ).ready(function() {
   function next() {
     // iterte current index.
     current++;
+    if(current === Object.keys(Questions).length) {
+      finish()
+    } else {
 
-    // Animate the next options.
-    changeImage($('#image1'), Images[Questions[current]]);
-    changeImage($('#image2'), Images[Questions[current]]);
+      // Animate the next options.
+      $('#image1').src = Images[Questions[current]];
+      $('#image2').src = Images[Questions[current]];
+      $('#option1text').text(Questions[current][0]);
+      $('#option2text').text(Questions[current][1]);
 
-    // Animate and update progress bar.
-    move();
-
+      // Animate and update progress bar.
+      move();
+    }
   }
 
   // Return final or finalists locations.
   function finish() {
     var finalists = matching(Answers);
     console.log(finalists);
-  }
 
-  function changeImage(obj, img) {
-    obj.src = img;
+    // Give final screen of where to study.
+    $('.container').html(finish_page);
+    if(finalists.length > 1) {
+
+    } else {
+      $('#finish').text(finalists[0])
+    }
   }
 
   // Progress Bar Update.
   function move() {
     // Assume MyBar is the ID of the bar.
     var elem = document.getElementById("myBar");
-    var width = 10;
+    var width = progresswidth;
     var id = setInterval(frame, 10);
     function frame() {
-      var indexer = Math.floor(current / Questions.keys.length * 100);
-      if (width >= 100 || width == indexer) {
+      var indexer = Math.floor(current / Object.keys(Questions).length * 100);
+      if (width === indexer || width >= 100) {
         clearInterval(id);
       } else {
         width++;
+        progresswidth = width;
         elem.style.width = width + '%';
-        elem.innerHTML = width * 1  + '%';
       }
     }
   }
+
 });
+
+var finish_page = `
+<div id="myProgress">
+  <div id="myBad"></div>
+</div>
+<div class="row">
+  <div id="finish" class="col-sm-12">
+    Yoooo
+  </div>
+</div>`

@@ -18,22 +18,26 @@
 
   <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../public/stylesheets/question.css" />
+  <script src="../public/scripts/script.js" ></script>
+  <script src="../public/scripts/matching.js" ></script>
+  <script src="../public/scripts/js_dict.js" ></script>
 </header>
 
 <body>
     <div class="container">
-
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
       <div class="row">
-        <div class="col-sm-6">
-        <img class="question-image" id="image1" src="http://www.reusableart.com/miwp/wp-content/uploads/2015/09/letter-A.jpeg" alt="option1">
-          <span class="question-title"> Quiet </span>
+        <div id="option1" class="col-sm-6">
+        <img class="question-image" id="image1" src="http://www.reusableart.com/miwp/wp-content/uploads/2015/09/letter-A.jpeg" alt="option1" />
+          <span id="option1text" class="question-title"> Quiet </span>
         </div>
 
-        <div class="col-sm-6">
-          <img class="question-image" id="image2" src="https://i.pinimg.com/474x/72/2a/ed/722aed9899661e3add9030c6d78d3936--lettering-design-logo-design.jpg" alt="option2">
-          <span class="question-title"> Loud </span>
+        <div id="option2" class="col-sm-6">
+          <img class="question-image" id="image2" src="https://i.pinimg.com/474x/72/2a/ed/722aed9899661e3add9030c6d78d3936--lettering-design-logo-design.jpg" alt="option2" />
+          <span id="option2text" class="question-title"> Loud </span>
         </div>
-
       </div>
     </div>
 
