@@ -14,7 +14,7 @@ function matching(answers) {
         count++;
       }
     })
-    console.log(count);
+    console.log('Location: ' + index, count);
     if(count > bestcount) {
       bestcount = count;
       matchOutput = [];
